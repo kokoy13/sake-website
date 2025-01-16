@@ -4,41 +4,766 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/output.css">
-    <title>Document</title>
+    <title>Sake Idn</title>
 </head>
 <body>
     <div>
-        <nav class="flex px-14 gap-12">
-            <img class="w-20" src="./assets/Logo.png" alt="">
-            <div class="flex gap-24 font-bold items-center text-lg">
-                <div class="flex gap-2 items-center ">
-                    <a href="">
+        <!-- Navigation Bar -->
+        <nav class="flex px-14 gap-12 justify-between">
+            <img loading="lazy" class="w-20" src="./assets/Logo.png" alt="">
+            <div class="flex gap-20 font-bold items-center text-lg">
+                <div class="flex items-center">
+                    <a href="" class="py-2 hover:bg-gray-300 transition duration-300 ease-in rounded-full flex items-center px-5 gap-2">
                         <h2>Categories</h2>
+                        <img loading="lazy" class="w-7 translate-y-0.5" src="./assets/down.png" alt="">
                     </a>
                 </div>
-                <div>
-                    <a href="">
-                        <h2>Best Price</h2>
-                    </a>
-                </div>
-                <div>
-                    <a href="">
-                        <h2>Profile</h2>
-                    </a>
-                </div>
+                <a href="" class="py-2 hover:bg-gray-300 transition duration-300 ease-in rounded-full px-5">
+                    <h2>Best Price</h2>
+                </a>
+                <a href="" class="py-2 hover:bg-gray-300 transition duration-300 ease-in rounded-full px-5 ">
+                    <h2>Profile</h2>
+                </a>
             </div>
-            <div>
-                <input type="search" name="" id="">
+            <div class="flex items-center w-max">
+                <div class="w-max h-5 bg-gray-400 rounded-lg">
+                    <input type="search" name="" id="">
+                </div>
             </div>
             <div class="flex items-center gap-5 font-bold">
-                <a href="login.php">Log In</a>
-                <div></div>
-                <a href="cart.php"></a>
+                <a href="login.php" class="bg-black px-5 py-2 rounded-full text-white flex justify-center items-center">
+                    <span>Log In</span>
+                </a>
+                <div class="px-[1px] h-14 my-2 bg-black"></div>
+                <a class="bg-gray-300 p-3 rounded-full" href="cart.php">
+                    <img loading="lazy" class="w-5" src="./assets/cart.png" alt="">
+                </a>
             </div>
         </nav>
-        <section class="max-h-svh">
-            <img class="h-full" src="./assets/hero.jpg" alt="">
+        
+        <!-- Hero -->
+        <section>
+            <img loading="lazy" class="max-h-[400px] w-full" src="./assets/hero.jpg" alt="">
         </section>
+
+        <!-- Services -->
+        <div class="m-14 border-2 border-gray-300 rounded-xl">
+            <div class="p-7 justify-evenly flex">
+                <div class="flex items-center gap-3">
+                    <img loading="lazy" class="w-16" src="./assets/fastshiping.png" alt="">
+                    <div class="flex flex-col gap-1">
+                        <h1 class="font-bold">Fast Shipping</h1>
+                        <span class="text-xs max-w-52 text-wrap">Quick And Simple Home Delivery For All Your Shipping Essentials</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <img loading="lazy" class="w-16" src="./assets/security.png" alt="">
+                    <div class="flex flex-col gap-1">
+                        <h1 class="font-bold">Payment Security</h1>
+                        <span class="text-xs max-w-52 text-wrap">Shop with Confidence: Secure payments Guaranteed</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <img loading="lazy" class="w-16" src="./assets/cs.png" alt="">
+                    <div class="flex flex-col gap-1">
+                        <h1 class="font-bold">Support 24/7</h1>
+                        <span class="text-xs max-w-52 text-wrap">24/7 Online Support For A Best Shopping Experience!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="mx-14 mb-10">
+            <div>
+                <div class="flex justify-between items-center mb-10">
+                    <h1 class="text-3xl font-semibold uppercase">categories</h1>
+                    <a class="px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors text-lg duration-300 ease-in-out" href="">
+                        <span>View All</span>
+                    </a>
+                </div>
+                <div class="flex justify-between flex-wrap">
+                    <a class="w-[32%] relative mb-5 "  href="">
+                        <div class="absolute rounded-xl bg-black top-0 left-0 bottom-0 right-0 bg-opacity-50"></div>
+                        <img loading="lazy" class="rounded-xl" src="./assets/soju.jpg" alt="">
+                        <span class="absolute text-white font-semibold uppercase text-4xl top-1/2 left-1/2 -translate-x-1/2  z-20">SOJU</span>
+                    </a>
+                    <a class="w-[32%] relative mb-5 "  href="">
+                        <div class="absolute rounded-xl bg-black top-0 left-0 bottom-0 right-0 bg-opacity-50"></div>
+                        <img loading="lazy" class="rounded-xl" src="./assets/whisky.jpg" alt="">
+                        <span class="absolute text-white font-semibold uppercase text-4xl top-1/2 left-1/2 -translate-x-1/2  z-20">WHISKY</span>
+                    </a>
+                    <a class="w-[32%] relative mb-5 "  href="">
+                        <div class="absolute rounded-xl bg-black top-0 left-0 bottom-0 right-0 bg-opacity-50"></div>
+                        <img loading="lazy" class="rounded-xl" src="./assets/liquor.jpg" alt="">
+                        <span class="absolute text-white font-semibold uppercase text-4xl top-1/2 left-1/2 -translate-x-1/2  z-20">LIQUOR</span>
+                    </a>
+                    <a class="w-[32%] relative mb-5 "  href="">
+                        <div class="absolute rounded-xl bg-black top-0 left-0 bottom-0 right-0 bg-opacity-50"></div>
+                        <img loading="lazy" class="rounded-xl" src="./assets/Gin.jpg" alt="">
+                        <span class="absolute text-white font-semibold uppercase text-4xl top-1/2 left-1/2 -translate-x-1/2  z-20">GIN</span>
+                    </a>
+                    <a class="w-[32%] relative mb-5 "  href="">
+                        <div class="absolute rounded-xl bg-black top-0 left-0 bottom-0 right-0 bg-opacity-50"></div>
+                        <img loading="lazy" class="rounded-xl" src="./assets/Wine.jpg" alt="">
+                        <span class="absolute text-white font-semibold uppercase text-4xl top-1/2 left-1/2 -translate-x-1/2  z-20">WINE</span>
+                    </a>
+                    <a class="w-[32%] relative mb-5 "  href="">
+                        <div class="absolute rounded-xl bg-black top-0 left-0 bottom-0 right-0 bg-opacity-50"></div>
+                        <img loading="lazy" class="rounded-xl" src="./assets/Sake.jpg" alt="">
+                        <span class="absolute text-white font-semibold uppercase text-4xl top-1/2 left-1/2 -translate-x-1/2  z-20">SAKE</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Best Seller -->
+        <div class="mx-14 mb-10">
+            <div>
+                <div class="flex justify-between items-center mb-10">
+                    <h1 class="text-3xl font-semibold uppercase">best seller</h1>
+                    <a class="px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors text-lg duration-300 ease-in-out" href="">
+                        <span>View All</span>
+                    </a>
+                </div>
+                <div class="flex justify-between flex-wrap">
+                    <div class="w-[24%] mb-5">
+                        <a class="relative" href="">
+                            <img loading="lazy" src="./assets/sake.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">Sake</span>
+                            <h1 class="uppercase text-nowrap font-semibold">Sake</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 1,500,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative" href="">
+                            <img loading="lazy" src="./assets/chamisul-fresh.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">soju</span>
+                            <h1 class="uppercase text-nowrap font-semibold">jinro chamisul fresh</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 100,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative" href="">
+                            <img loading="lazy" src="./assets/glenmorangie-10yo.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">whisky</span>
+                            <h1 class="uppercase text-nowrap font-semibold">glenmorangie the original 10 y.o</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 399,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative" href="">
+                            <img loading="lazy" src="./assets/akashi-red.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">wishky</span>
+                            <h1 class="uppercase text-nowrap font-semibold">akashi red</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 450,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative" href="">
+                            <img loading="lazy" src="./assets/rare-dry.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">gin</span>
+                            <h1 class="uppercase text-nowrap font-semibold">four pillar rare dry </h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 1,000,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative" href="">
+                            <img loading="lazy" src="./assets/amaretto.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">liqueur</span>
+                            <h1 class="uppercase text-nowrap font-semibold">giffard amaretto</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 565,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative" href="">
+                            <img loading="lazy" src="./assets/cabernet-sauvignon.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">wine</span>
+                            <h1 class="uppercase text-nowrap font-semibold">meiomi cabernet sauvignon</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 550,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative" href="">
+                            <img loading="lazy" src="./assets/gold-trees.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">wine</span>
+                            <h1 class="uppercase text-nowrap font-semibold">gold trees shiraz</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 275,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SOJU JINRO -->
+        <div class="mx-14 mb-10">
+            <div>
+                <div class="flex justify-between items-center mb-10">
+                    <h1 class="text-3xl font-semibold uppercase">soju jinro</h1>
+                    <a class="px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors text-lg duration-300 ease-in-out" href="">
+                        <span>View All</span>
+                    </a>
+                </div>
+                <div class="flex justify-between flex-wrap">
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/chamisul-fresh.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">soju</span>
+                            <h1 class="uppercase text-nowrap font-semibold">jinro chamisul fresh</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 100,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/chamisul-pet.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">soju</span>
+                            <h1 class="uppercase text-nowrap font-semibold">jinro chamisul pet</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 399,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/is-back.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">soju</span>
+                            <h1 class="uppercase text-nowrap font-semibold">Jinro is back</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 110,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/ilpoom.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">soju</span>
+                            <h1 class="uppercase text-nowrap font-semibold">jinro ilpoom</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 490,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WHISKY -->
+        <div class="mx-14 mb-10">
+            <div>
+                <div class="flex justify-between items-center mb-10">
+                    <h1 class="text-3xl font-semibold uppercase">WHISKY</h1>
+                    <a class="px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors text-lg duration-300 ease-in-  out" href="">
+                        <span>View All</span>
+                    </a>
+                </div>
+                <div class="flex justify-between flex-wrap">
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/akashi-red.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">whisky</span>
+                            <h1 class="uppercase text-nowrap font-semibold">akashi red</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 450,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/white-oak.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">WHISKY</span>
+                            <h1 class="uppercase text-nowrap font-semibold">akashi white oak</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 550,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/eigashima.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">whisky</span>
+                            <h1 class="uppercase text-nowrap font-semibold">akashi single malt</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 1,600,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/glenmorangie-10yo.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">whisky</span>
+                            <h1 class="uppercase text-nowrap font-semibold">eigashima</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 750,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GIN -->
+        <div class="mx-14 mb-10">
+            <div>
+                <div class="flex justify-between items-center mb-10">
+                    <h1 class="text-3xl font-semibold uppercase">gin</h1>
+                    <a class="px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors text-lg duration-300 ease-in-  out" href="">
+                        <span>View All</span>
+                    </a>
+                </div>
+                <div class="flex justify-between flex-wrap">
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/rare-dry.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">gin</span>
+                            <h1 class="uppercase text-nowrap font-semibold">four pillar rare dry</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 1,000,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/bloody-shiraz.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">gin</span>
+                            <h1 class="uppercase text-nowrap font-semibold">four pillar bloody shiraz</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 1,100,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/spiced-negroni.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">gin</span>
+                            <h1 class="uppercase text-nowrap font-semibold">four pillar spiced negroni</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 1,100,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/fresh-yuzu.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">gin</span>
+                            <h1 class="uppercase text-nowrap font-semibold">four pillar fresh yuzu</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 1,000,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LIQUEUR -->
+        <div class="mx-14 mb-10">
+            <div>
+                <div class="flex justify-between items-center mb-10">
+                    <h1 class="text-3xl font-semibold uppercase">liqueur</h1>
+                    <a class="px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors text-lg duration-300 ease-in-  out" href="">
+                        <span>View All</span>
+                    </a>
+                </div>
+                <div class="flex justify-between flex-wrap">
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/amaretto.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">Liqueur</span>
+                            <h1 class="uppercase text-nowrap font-semibold">giffard amaretto</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 565,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/banane-du-bresil.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">liqueur</span>
+                            <h1 class="uppercase text-nowrap font-semibold">giffard banane du bresil</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 600,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/creme-decacao.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">liqueur</span>
+                            <h1 class="uppercase text-nowrap font-semibold">giffard creme de cacao(brown)</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 565,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/creme-decacao-white.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">liqueur</span>
+                            <h1 class="uppercase text-nowrap font-semibold">giffard creme de cacao(white)</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 515,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WINE -->
+        <div class="mx-14 mb-10">
+            <div>
+                <div class="flex justify-between items-center mb-10">
+                    <h1 class="text-3xl font-semibold uppercase">WINE</h1>
+                    <a class="px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors text-lg duration-300 ease-in-  out" href="">
+                        <span>View All</span>
+                    </a>
+                </div>
+                <div class="flex justify-between flex-wrap">
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/cabernet-sauvignon.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">wine</span>
+                            <h1 class="uppercase text-nowrap font-semibold">meiomi cabernet sauvignon</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 550,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/chardonnay.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">wine</span>
+                            <h1 class="uppercase text-nowrap font-semibold">meiomi chardonnay</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 550,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/pinot-noir.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">wine</span>
+                            <h1 class="uppercase text-nowrap font-semibold">meiomi pinot air</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 550,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[24%] mb-5">
+                        <a class="relative mb-5" href="">
+                            <img loading="lazy" src="./assets/rose.png" alt="">
+                        </a>
+                        <div class="pb-5 px-8">
+                            <span class="text-slate-400 text-sm uppercase">wine</span>
+                            <h1 class="uppercase text-nowrap font-semibold">meiomi rose</h1>
+                            <div class="text-red-600 justify-between flex items-center">
+                                <h2 class="text-lg font-bold">IDR 550,000</h2>
+                                <div class="flex gap-3">
+                                    <a href="">
+                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
