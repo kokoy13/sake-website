@@ -25,10 +25,27 @@
                     <h2>Profile</h2>
                 </a>
             </div>
-            <div class="flex items-center w-max">
-                <div class="w-max h-5 bg-gray-400 rounded-lg">
-                    <input type="search" name="" id="">
-                </div>
+            <div class="flex items-center w-72 max-w-sm mx-auto">
+                <input 
+                    type="text" 
+                    placeholder="Apa yang sedang anda cari?" 
+                    class="w-full h-10 focus:ring-0 py-2 px-4 text-sm text-black bg-gray-100 rounded-l-md border-none" 
+                />
+                <button class="flex items-center justify-center w-12 h-10 bg-black rounded-r-md">
+                    <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="white" 
+                    stroke-width="2" 
+                    class="w-5 h-5">
+                        <path 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        d="M21 21l-4.35-4.35m2.12-5.02a7.5 7.5 0 11-15.01 0 7.5 7.5 0 0115.01 0z" 
+                        />
+                    </svg>
+                </button>
             </div>
             <div class="flex items-center gap-5 font-bold">
                 <a href="login.php" class="bg-black px-5 py-2 rounded-full text-white flex justify-center items-center">
@@ -41,10 +58,47 @@
             </div>
         </nav>
         
-        <!-- Hero -->
-        <section>
-            <img loading="lazy" class="max-h-[400px] w-full" src="./assets/hero.jpg" alt="">
-        </section>
+        <!-- Carousel -->
+        <div id="default-carousel" class="relative w-full" data-carousel="static">
+            <!-- Carousel wrapper -->
+            <div class="relative h-56 overflow-hidden md:h-96">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img loading="lazy" src="./assets/hero.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img loading="lazy" src="./assets/hero2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img loading="lazy" src="./assets/hero3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+            </div>
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            </div>
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
 
         <!-- Services -->
         <div class="m-14 border-2 border-gray-300 rounded-xl">
@@ -771,7 +825,7 @@
                 <div class="flex items-center">
                     <img class="w-20" src="./assets/Logo(white).png" alt="">
                     <div class="text-white">
-                        <h1 class="text-lg font-semibold">PT GARUDA EMAS BERSAUDARA</h1>
+                        <h1 class="text-lg font-semibold text-nowrap">PT GARUDA EMAS BERSAUDARA</h1>
                         <span class="text-sm">DISTRIBUTOR</span>
                     </div>
                 </div>
@@ -804,12 +858,12 @@
                 </div>
                 <div class="flex flex-col gap-3 max-w-52">
                     <h1 class="font-semibold">Contact</h1>
-                    <a class="text-sm flex gap-3" href="">
-                        <img class="w-3" src="./assets/telp.png" alt="">
+                    <a class="text-sm flex gap-3 items-center" href="">
+                        <img class="w-4 h-4" src="./assets/telp.png" alt="">
                         <span>+62 812-1422-3002</span>
                     </a>
-                    <a class="text-sm flex gap-3" href="">
-                        <img class="w-3" src="./assets/email.png " alt="">
+                    <a class="text-sm flex gap-3 items-center" href="">
+                        <img class="w-4 h-4" src="./assets/email.png " alt="">
                         <span>sake.officialidn@gmail.com</span>
                     </a>
                     <a class="text-sm flex gap-3" href="">
@@ -823,5 +877,7 @@
             </div>
         </footer>
     </div>
+
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
 </body>
 </html>
