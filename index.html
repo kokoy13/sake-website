@@ -8,57 +8,106 @@
 </head>
 <body>
     <div>
-        <!-- Navigation Bar -->
-        <nav class="flex px-14 gap-12 justify-between text-nowrap items-center">
+        <!-- Navigation -->
+        <nav class="flex flex-wrap items-center justify-between px-6 lg:px-14 bg-white shadow-md md:fixed lg:static md:-top-1 w-full md:z-50">
+
             <!-- Logo -->
-            <img loading="lazy" class="w-20" src="./assets/Logo.png" alt="">
-            
+            <a href="#" class="flex items-center mr-auto sm:mr-0">
+                <img loading="lazy" class="w-16 sm:w-20" src="./assets/Logo.png" alt="Logo">
+            </a>
+        
+            <!-- Toggle Button (Hamburger Icon) -->
+            <button 
+            data-collapse-toggle="navbar-default" 
+            type="button" 
+            class="inline-flex items-center order-3 p-2 ml-3 text-gray-500 rounded-lg md:order-2 xl:hidden hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-default" 
+            aria-expanded="false"
+            >
+            <svg 
+                class="w-4 h-4 sm:w-6 sm:h-6" 
+                xmlns="http://www.w3.org/2000/svg" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor" 
+                stroke-width="2"
+            >
+                <path 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    d="M4 6h16M4 12h16M4 18h16"
+                />
+            </svg>
+            </button>
+
+        
             <!-- Navigation List -->
-            <div class="flex gap-20 md:gap-5 font-bold items-center text-lg md:hidden">
-                <div class="flex items-center">
-                    <a href="" class="py-2 hover:bg-gray-300 transition duration-300 ease-in rounded-full flex items-center px-5 gap-2">
-                        <h2>Categories</h2>
-                        <img loading="lazy" class="w-7 translate-y-0.5" src="./assets/down.png" alt="">
-                    </a>
-                </div>
-                <a href="" class="py-2 hover:bg-gray-300 transition duration-300 ease-in rounded-full px-5">
-                    <h2>Best Price</h2>
-                </a>
-                <a href="" class="py-2 hover:bg-gray-300 transition duration-300 ease-in rounded-full px-5 ">
-                    <h2>Profile</h2>
-                </a>
+            <div 
+                id="navbar-default" 
+                class="hidden md:order-3 min-[1115px]:order-none absolute top-16 z-[60] sm:static md:mb-5 min-[1115px]:mb-0 w-full min-[1115px]:flex min-[1115px]:items-center min-[1115px]:justify-between min-[1115px]:w-auto pr-10"
+            >
+                <ul class="flex flex-col min-[1115px]:flex-row min-[1115px]:items-center min-[1115px]:gap-10 font-bold text-lg bg-white">
+                    <li class="flex items-center">
+                        <a 
+                            href="#" 
+                            class="flex items-center gap-2 px-5 py-2 w-full md:rounded-none min-[1115px]:rounded-full min-[320px]:justify-center hover:bg-gray-300 transition duration-300 ease-in"
+                        >
+                            <span>Categories</span>
+                            <img loading="lazy" class="w-5 min-[1115px]:w-7 translate-y-0.5" src="./assets/down.png" alt="Dropdown">
+                        </a>
+                    </li>
+                    <li class="flex items-center">
+                        <a 
+                            href="#" 
+                            class="px-5 py-2 w-full md:rounded-none min-[1115px]:rounded-full min-[320px]:text-center hover:bg-gray-300 transition duration-300 ease-in"
+                        >
+                            Best Price
+                        </a>
+                    </li>
+                    <li class="flex items-center">
+                        <a 
+                            href="#" 
+                            class="px-5 py-2 w-full md:rounded-none min-[1115px]:rounded-full min-[320px]:text-center hover:bg-gray-300 transition duration-300 ease-in"
+                        >
+                            Profile
+                        </a>
+                    </li>
+                </ul>
             </div>
+        
             <!-- Input Search -->
-            <div class="flex items-center w-72 max-w-sm md:w-full mx-auto">
+            <div class="flex items-center w-full max-w-sm mx-auto order-last mb-5 sm:order-none sm:mb-0">
                 <input 
                     type="text" 
                     placeholder="Apa yang sedang anda cari?" 
-                    class="w-full h-10 focus:ring-0 py-2 px-4 text-sm text-black bg-gray-100 rounded-l-md border-none" 
+                    class="w-full h-10 py-2 px-4 text-sm text-black bg-gray-100 rounded-l-md border-none focus:ring-0"
                 />
                 <button class="flex items-center justify-center w-12 h-10 bg-black rounded-r-md">
                     <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
-                    stroke="white" 
-                    stroke-width="2" 
-                    class="w-5 h-5">
+                        xmlns="http://www.w3.org/2000/svg" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="white" 
+                        stroke-width="2" 
+                        class="w-5 h-5"
+                    >
                         <path 
-                        stroke-linecap="round" 
-                        stroke-linejoin="round" 
-                        d="M21 21l-4.35-4.35m2.12-5.02a7.5 7.5 0 11-15.01 0 7.5 7.5 0 0115.01 0z" 
+                            stroke-linecap="round" 
+                            stroke-linejoin="round" 
+                            d="M21 21l-4.35-4.35m2.12-5.02a7.5 7.5 0 11-15.01 0 7.5 7.5 0 0115.01 0z"
                         />
                     </svg>
                 </button>
             </div>
-            <!-- Login and Cart Button-->
-            <div class="flex items-center gap-5 font-bold">
-                <a href="login.php" class="bg-black px-5 py-2 rounded-full text-white flex justify-center items-center">
-                    <span>Log In</span>
+        
+            <!-- Login and Cart Button -->
+            <div class="flex items-center sm:gap-5 min-[320px]:gap-[10px] font-bold">
+                <a href="" class="bg-black px-5 py-2 sm:text-sm min-[320px]:text-[8px] min-[769px]:text-base rounded-full text-white flex justify-center items-center">
+                    Log In
                 </a>
-                <div class="px-[1px] h-14 my-2 bg-black"></div>
-                <a class="bg-gray-300 p-3 rounded-full w-max" href="cart.php">
-                    <img loading="lazy" class="w-5 lg:w-5" src="./assets/cart.png" alt="">
+                <div class="sm:px-[1px] min-[320px]:px-[0.5px] sm:h-10 min-[320px]:h-6  bg-black"></div>
+                <a class="bg-gray-300 sm:p-3 min-[320px]:p-2 rounded-full w-max" href="">
+                    <img loading="lazy" class="min-[320px]:w-3 sm:w-5" src="./assets/cart.png" alt="Cart">
                 </a>
             </div>
         </nav>
@@ -106,241 +155,244 @@
         </div>
 
         <!-- Services -->
-        <div class="m-14 border-2 border-gray-300 rounded-xl">
-            <div class="p-7 justify-evenly flex">
-                <div class="flex items-center gap-3">
-                    <img loading="lazy" class="w-16" src="./assets/fastshiping.png" alt="">
-                    <div class="flex flex-col gap-1">
-                        <h1 class="font-bold">Fast Shipping</h1>
-                        <span class="text-xs max-w-52 text-wrap">Quick And Simple Home Delivery For All Your Shipping Essentials</span>
+        <div class="m-6 lg:m-14 border-2 border-gray-300 rounded-xl">
+            <div class="flex p-7 justify-evenly items-start max-sm:flex-col max-sm:items-center max-sm:gap-3">
+                <!-- Fast Shipping -->
+                <div class="flex items-center gap-3 max-sm:flex-col max-sm:items-center">
+                    <img loading="lazy" class="w-8 md:w-11 lg:w-16" src="./assets/fastshiping.png" alt="Fast Shipping">
+                    <div class="flex flex-col gap-1 max-sm:items-center">
+                        <h1 class="font-bold text-xs sm:text-base">Fast Shipping</h1>
+                        <span class="text-xs max-w-52 max-sm:text-center">Quick and Simple Home Delivery for All Your Shipping Essentials</span>
                     </div>
                 </div>
-                <div class="flex items-center gap-3">
-                    <img loading="lazy" class="w-16" src="./assets/security.png" alt="">
-                    <div class="flex flex-col gap-1">
-                        <h1 class="font-bold">Payment Security</h1>
-                        <span class="text-xs max-w-52 text-wrap">Shop with Confidence: Secure payments Guaranteed</span>
+                <!-- Payment Security -->
+                <div class="flex items-center gap-3 max-sm:flex-col max-sm:items-center">
+                    <img loading="lazy" class="w-8 md:w-11 lg:w-16" src="./assets/security.png" alt="Payment Security">
+                    <div class="flex flex-col gap-1 max-sm:items-center">
+                        <h1 class="font-bold text-xs sm:text-base">Payment Security</h1>
+                        <span class="text-xs max-w-52 max-sm:text-center">Shop with Confidence: Secure Payments Guaranteed</span>
                     </div>
                 </div>
-                <div class="flex items-center gap-3">
-                    <img loading="lazy" class="w-16" src="./assets/cs.png" alt="">
-                    <div class="flex flex-col gap-1">
-                        <h1 class="font-bold">Support 24/7</h1>
-                        <span class="text-xs max-w-52 text-wrap">24/7 Online Support For A Best Shopping Experience!</span>
+                <!-- Support 24/7 -->
+                <div class="flex items-center gap-3 max-sm:flex-col max-sm:items-center">
+                    <img loading="lazy" class="w-8 md:w-11 lg:w-16" src="./assets/cs.png" alt="Support 24/7">
+                    <div class="flex flex-col gap-1 max-sm:items-center">
+                        <h1 class="font-bold text-xs sm:text-base">Support 24/7</h1>
+                        <span class="text-xs max-w-52 max-sm:text-center">24/7 Online Support for the Best Shopping Experience!</span>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Categories -->
-        <div class="mx-14 mb-10">
+        <div class="m-6 lg:mx-14 mb-10">
             <div>
                 <div class="flex justify-between items-center mb-10">
-                    <h1 class="text-3xl font-semibold uppercase">categories</h1>
-                    <a class="px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors text-lg duration-300 ease-in-out" href="">
+                    <h1 class="max-sm:text-xl text-3xl font-semibold uppercase">categories</h1>
+                    <a class="max-sm:px-4 px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors max-sm:text-sm text-lg duration-300 ease-in-out" href="">
                         <span>View All</span>
                     </a>
                 </div>
                 <div class="flex justify-between flex-wrap">
-                    <a class="w-[32%] relative mb-5 "  href="">
+                    <a class="max-sm:w-[48%] w-[32%] relative mb-5"  href="">
                         <div class="absolute rounded-xl bg-black top-0 left-0 bottom-0 right-0 bg-opacity-50"></div>
                         <img loading="lazy" class="rounded-xl" src="./assets/soju.jpg" alt="">
-                        <span class="absolute text-white font-semibold uppercase text-4xl top-1/2 left-1/2 -translate-x-1/2  z-20">SOJU</span>
+                        <span class="absolute text-white font-semibold uppercase sm:text-2xl min-[769px]:text-4xl max-sm:-translate-y-1/2 md:-translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2  z-20">SOJU</span>
                     </a>
-                    <a class="w-[32%] relative mb-5 "  href="">
+                    <a class="max-sm:w-[48%] w-[32%] relative mb-5"  href="">
                         <div class="absolute rounded-xl bg-black top-0 left-0 bottom-0 right-0 bg-opacity-50"></div>
                         <img loading="lazy" class="rounded-xl" src="./assets/whisky.jpg" alt="">
-                        <span class="absolute text-white font-semibold uppercase text-4xl top-1/2 left-1/2 -translate-x-1/2  z-20">WHISKY</span>
+                        <span class="absolute text-white font-semibold uppercase sm:text-2xl min-[769px]:text-4xl max-sm:-translate-y-1/2 md:-translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2  z-20">WHISKY</span>
                     </a>
-                    <a class="w-[32%] relative mb-5 "  href="">
+                    <a class="max-sm:w-[48%] w-[32%] relative mb-5"  href="">
                         <div class="absolute rounded-xl bg-black top-0 left-0 bottom-0 right-0 bg-opacity-50"></div>
                         <img loading="lazy" class="rounded-xl" src="./assets/liquor.jpg" alt="">
-                        <span class="absolute text-white font-semibold uppercase text-4xl top-1/2 left-1/2 -translate-x-1/2  z-20">LIQUOR</span>
+                        <span class="absolute text-white font-semibold uppercase sm:text-2xl min-[769px]:text-4xl max-sm:-translate-y-1/2 md:-translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2  z-20">LIQUOR</span>
                     </a>
-                    <a class="w-[32%] relative mb-5 "  href="">
+                    <a class="max-sm:w-[48%] w-[32%] relative mb-5"  href="">
                         <div class="absolute rounded-xl bg-black top-0 left-0 bottom-0 right-0 bg-opacity-50"></div>
                         <img loading="lazy" class="rounded-xl" src="./assets/Gin.jpg" alt="">
-                        <span class="absolute text-white font-semibold uppercase text-4xl top-1/2 left-1/2 -translate-x-1/2  z-20">GIN</span>
+                        <span class="absolute text-white font-semibold uppercase sm:text-2xl min-[769px]:text-4xl max-sm:-translate-y-1/2 md:-translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2  z-20">GIN</span>
                     </a>
-                    <a class="w-[32%] relative mb-5 "  href="">
+                    <a class="max-sm:w-[48%] w-[32%] relative mb-5"  href="">
                         <div class="absolute rounded-xl bg-black top-0 left-0 bottom-0 right-0 bg-opacity-50"></div>
                         <img loading="lazy" class="rounded-xl" src="./assets/Wine.jpg" alt="">
-                        <span class="absolute text-white font-semibold uppercase text-4xl top-1/2 left-1/2 -translate-x-1/2  z-20">WINE</span>
+                        <span class="absolute text-white font-semibold uppercase sm:text-2xl min-[769px]:text-4xl max-sm:-translate-y-1/2 md:-translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2  z-20">WINE</span>
                     </a>
-                    <a class="w-[32%] relative mb-5 "  href="">
+                    <a class="max-sm:w-[48%] w-[32%] relative mb-5"  href="">
                         <div class="absolute rounded-xl bg-black top-0 left-0 bottom-0 right-0 bg-opacity-50"></div>
                         <img loading="lazy" class="rounded-xl" src="./assets/Sake.jpg" alt="">
-                        <span class="absolute text-white font-semibold uppercase text-4xl top-1/2 left-1/2 -translate-x-1/2  z-20">SAKE</span>
+                        <span class="absolute text-white font-semibold uppercase sm:text-2xl min-[769px]:text-4xl max-sm:-translate-y-1/2 md:-translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2  z-20">SAKE</span>
                     </a>
                 </div>
             </div>
         </div>
 
         <!-- Best Seller -->
-        <div class="mx-14 mb-10">
+        <div class="m-6 lg:mx-14 mb-10">
             <div>
                 <div class="flex justify-between items-center mb-10">
-                    <h1 class="text-3xl font-semibold uppercase">best seller</h1>
-                    <a class="px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors text-lg duration-300 ease-in-out" href="">
+                    <h1 class="max-sm:text-xl text-3xl font-semibold uppercase">best seller</h1>
+                    <a class="max-sm:px-4 px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors max-sm:text-sm text-lg duration-300 ease-in-out" href="">
                         <span>View All</span>
                     </a>
                 </div>
-                <div class="flex justify-between flex-wrap">
-                    <div class="w-[24%] mb-5">
+                <div class="flex justify-between flex-wrap md:justify-center">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative" href="">
                             <img loading="lazy" src="./assets/sake.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">Sake</span>
-                            <h1 class="uppercase text-nowrap font-semibold">Sake</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">Sake</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">Sake</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 1,500,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 1,500,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative" href="">
                             <img loading="lazy" src="./assets/chamisul-fresh.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">soju</span>
-                            <h1 class="uppercase text-nowrap font-semibold">jinro chamisul fresh</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">soju</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">jinro chamisul fresh</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 100,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 100,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative" href="">
                             <img loading="lazy" src="./assets/glenmorangie-10yo.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">whisky</span>
-                            <h1 class="uppercase text-nowrap font-semibold">glenmorangie the original 10 y.o</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">whisky</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">glenmorangie the original 10 y.o</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 399,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 399,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative" href="">
                             <img loading="lazy" src="./assets/akashi-red.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">wishky</span>
-                            <h1 class="uppercase text-nowrap font-semibold">akashi red</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">wishky</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">akashi red</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 450,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 450,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative" href="">
                             <img loading="lazy" src="./assets/rare-dry.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">gin</span>
-                            <h1 class="uppercase text-nowrap font-semibold">four pillar rare dry </h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">gin</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">four pillar rare dry </h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 1,000,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 1,000,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative" href="">
                             <img loading="lazy" src="./assets/amaretto.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">liqueur</span>
-                            <h1 class="uppercase text-nowrap font-semibold">giffard amaretto</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">liqueur</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">giffard amaretto</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 565,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 565,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative" href="">
                             <img loading="lazy" src="./assets/cabernet-sauvignon.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">wine</span>
-                            <h1 class="uppercase text-nowrap font-semibold">meiomi cabernet sauvignon</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">wine</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">meiomi cabernet sauvignon</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 550,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 550,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative" href="">
                             <img loading="lazy" src="./assets/gold-trees.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">wine</span>
-                            <h1 class="uppercase text-nowrap font-semibold">gold trees shiraz</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">wine</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">gold trees shiraz</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 275,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 275,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -351,90 +403,90 @@
         </div>
 
         <!-- SOJU JINRO -->
-        <div class="mx-14 mb-10">
+        <div class="m-6 lg:mx-14 mb-10">
             <div>
                 <div class="flex justify-between items-center mb-10">
-                    <h1 class="text-3xl font-semibold uppercase">soju jinro</h1>
-                    <a class="px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors text-lg duration-300 ease-in-out" href="">
+                    <h1 class="max-sm:text-xl text-3xl font-semibold uppercase">soju jinro</h1>
+                    <a class="max-sm:px-4 px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors max-sm:text-sm text-lg duration-300 ease-in-out" href="">
                         <span>View All</span>
                     </a>
                 </div>
-                <div class="flex justify-between flex-wrap">
-                    <div class="w-[24%] mb-5">
+                <div class="flex justify-between flex-wrap md:justify-center">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/chamisul-fresh.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">soju</span>
-                            <h1 class="uppercase text-nowrap font-semibold">jinro chamisul fresh</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">soju</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">jinro chamisul fresh</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 100,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 100,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/chamisul-pet.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">soju</span>
-                            <h1 class="uppercase text-nowrap font-semibold">jinro chamisul pet</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">soju</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">jinro chamisul pet</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 399,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 399,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/is-back.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">soju</span>
-                            <h1 class="uppercase text-nowrap font-semibold">Jinro is back</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">soju</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">Jinro is back</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 110,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 110,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/ilpoom.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">soju</span>
-                            <h1 class="uppercase text-nowrap font-semibold">jinro ilpoom</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">soju</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">jinro ilpoom</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 490,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 490,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -445,90 +497,90 @@
         </div>
 
         <!-- WHISKY -->
-        <div class="mx-14 mb-10">
+        <div class="m-6 lg:mx-14 mb-10">
             <div>
                 <div class="flex justify-between items-center mb-10">
-                    <h1 class="text-3xl font-semibold uppercase">WHISKY</h1>
-                    <a class="px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors text-lg duration-300 ease-in-  out" href="">
+                    <h1 class="max-sm:text-xl text-3xl font-semibold uppercase">WHISKY</h1>
+                    <a class="max-sm:px-4 px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors max-sm:text-sm text-lg duration-300 ease-in-out" href="">
                         <span>View All</span>
                     </a>
                 </div>
-                <div class="flex justify-between flex-wrap">
-                    <div class="w-[24%] mb-5">
+                <div class="flex justify-between flex-wrap md:justify-center">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/akashi-red.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">whisky</span>
-                            <h1 class="uppercase text-nowrap font-semibold">akashi red</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">whisky</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">akashi red</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 450,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 450,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/white-oak.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">WHISKY</span>
-                            <h1 class="uppercase text-nowrap font-semibold">akashi white oak</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">WHISKY</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">akashi white oak</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 550,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 550,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/eigashima.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">whisky</span>
-                            <h1 class="uppercase text-nowrap font-semibold">akashi single malt</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">whisky</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">akashi single malt</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 1,600,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 1,600,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/glenmorangie-10yo.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">whisky</span>
-                            <h1 class="uppercase text-nowrap font-semibold">eigashima</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">whisky</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">eigashima</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 750,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 750,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -539,90 +591,90 @@
         </div>
 
         <!-- GIN -->
-        <div class="mx-14 mb-10">
+        <div class="m-6 lg:mx-14 mb-10">
             <div>
                 <div class="flex justify-between items-center mb-10">
-                    <h1 class="text-3xl font-semibold uppercase">gin</h1>
-                    <a class="px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors text-lg duration-300 ease-in-  out" href="">
+                    <h1 class="max-sm:text-xl text-3xl font-semibold uppercase">gin</h1>
+                    <a class="max-sm:px-4 px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors max-sm:text-sm text-lg duration-300 ease-in-out" href="">
                         <span>View All</span>
                     </a>
                 </div>
-                <div class="flex justify-between flex-wrap">
-                    <div class="w-[24%] mb-5">
+                <div class="flex justify-between flex-wrap md:justify-center">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/rare-dry.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">gin</span>
-                            <h1 class="uppercase text-nowrap font-semibold">four pillar rare dry</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">gin</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">four pillar rare dry</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 1,000,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 1,000,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/bloody-shiraz.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">gin</span>
-                            <h1 class="uppercase text-nowrap font-semibold">four pillar bloody shiraz</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">gin</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">four pillar bloody shiraz</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 1,100,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 1,100,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/spiced-negroni.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">gin</span>
-                            <h1 class="uppercase text-nowrap font-semibold">four pillar spiced negroni</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">gin</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">four pillar spiced negroni</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 1,100,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 1,100,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/fresh-yuzu.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">gin</span>
-                            <h1 class="uppercase text-nowrap font-semibold">four pillar fresh yuzu</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">gin</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">four pillar fresh yuzu</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 1,000,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 1,000,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -633,90 +685,90 @@
         </div>
 
         <!-- LIQUEUR -->
-        <div class="mx-14 mb-10">
+        <div class="m-6 lg:mx-14 mb-10">
             <div>
                 <div class="flex justify-between items-center mb-10">
-                    <h1 class="text-3xl font-semibold uppercase">liqueur</h1>
-                    <a class="px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors text-lg duration-300 ease-in-  out" href="">
+                    <h1 class="max-sm:text-xl text-3xl font-semibold uppercase">liqueur</h1>
+                    <a class="max-sm:px-4 px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors max-sm:text-sm text-lg duration-300 ease-in-out" href="">
                         <span>View All</span>
                     </a>
                 </div>
-                <div class="flex justify-between flex-wrap">
-                    <div class="w-[24%] mb-5">
+                <div class="flex justify-between flex-wrap md:justify-center">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/amaretto.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">Liqueur</span>
-                            <h1 class="uppercase text-nowrap font-semibold">giffard amaretto</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">Liqueur</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">giffard amaretto</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 565,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 565,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/banane-du-bresil.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">liqueur</span>
-                            <h1 class="uppercase text-nowrap font-semibold">giffard banane du bresil</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">liqueur</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">giffard banane du bresil</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 600,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 600,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/creme-decacao.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">liqueur</span>
-                            <h1 class="uppercase text-nowrap font-semibold">giffard creme de cacao(brown)</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">liqueur</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">giffard creme de cacao(brown)</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 565,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 565,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/creme-decacao-white.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">liqueur</span>
-                            <h1 class="uppercase text-nowrap font-semibold">giffard creme de cacao(white)</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">liqueur</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">giffard creme de cacao(white)</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 515,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 515,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -727,90 +779,90 @@
         </div>
 
         <!-- WINE -->
-        <div class="mx-14 mb-10">
+        <div class="m-6 lg:mx-14 mb-10">
             <div>
                 <div class="flex justify-between items-center mb-10">
-                    <h1 class="text-3xl font-semibold uppercase">WINE</h1>
-                    <a class="px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors text-lg duration-300 ease-in-  out" href="">
+                    <h1 class="max-sm:text-xl text-3xl font-semibold uppercase">WINE</h1>
+                    <a class="max-sm:px-4 px-8 py-1 rounded-lg bg-black text-white hover:bg-white hover:text-black transition-colors max-sm:text-sm text-lg duration-300 ease-in-out" href="">
                         <span>View All</span>
                     </a>
                 </div>
-                <div class="flex justify-between flex-wrap">
-                    <div class="w-[24%] mb-5">
+                <div class="flex justify-between flex-wrap md:justify-center">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/cabernet-sauvignon.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">wine</span>
-                            <h1 class="uppercase text-nowrap font-semibold">meiomi cabernet sauvignon</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">wine</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">meiomi cabernet sauvignon</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 550,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 550,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/chardonnay.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">wine</span>
-                            <h1 class="uppercase text-nowrap font-semibold">meiomi chardonnay</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">wine</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">meiomi chardonnay</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 550,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 550,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/pinot-noir.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">wine</span>
-                            <h1 class="uppercase text-nowrap font-semibold">meiomi pinot air</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">wine</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">meiomi pinot air</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 550,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 550,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-[24%] mb-5">
+                    <div class="max-sm:w-[50%] lg:w-[24%] md:w-[33%] mb-5">
                         <a class="relative mb-5" href="">
                             <img loading="lazy" src="./assets/rose.png" alt="">
                         </a>
                         <div class="pb-5 px-8">
-                            <span class="text-slate-400 text-sm uppercase">wine</span>
-                            <h1 class="uppercase text-nowrap font-semibold">meiomi rose</h1>
+                            <span class="text-slate-400 max-md:text-[10px] md:text-sm lg:text-base uppercase">wine</span>
+                            <h1 class="uppercase text-nowrap font-semibold truncate min-[769px]:text-base sm:text-sm max-sm:text-[8px]">meiomi rose</h1>
                             <div class="text-red-600 justify-between flex items-center">
-                                <h2 class="text-lg font-bold">IDR 550,000</h2>
+                                <h2 class="lg:text-lg font-bold min-[769px]:text-base sm:text-sm max-sm:text-[8px]">IDR 550,000</h2>
                                 <div class="flex gap-3">
                                     <a href="">
-                                        <img class="w-7" src="./assets/Search.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/Search.png" alt="">
                                     </a>
                                     <a href="">
-                                        <img class="w-7" src="./assets/addCart.png" alt="">
+                                        <img class="max-md:w-4 min-[769px]:w-5 lg:w-7" src="./assets/addCart.png" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -825,8 +877,8 @@
         </div>
 
         <!-- footer -->
-        <footer class="px-14 py-8 bg-black flex items-center">
-            <div class="flex flex-col gap-5">
+        <footer class="px-6 lg:px-14 py-8 bg-black flex max-lg:flex-col max-lg:gap-10 items-center">
+            <div class="flex flex-col gap-5 md:items-center">
                 <div class="flex items-center">
                     <img class="w-20" src="./assets/Logo(white).png" alt="">
                     <div class="text-white">
@@ -844,7 +896,7 @@
                     <span class="text-wrap">Alamat : Citra Garden 8 Blok B.2 No.9 pegadungan Kec. Kalideres Jakarta Barat</span>
                 </div>
             </div>
-            <div class="text-white flex justify-between w-full px-20">
+            <div class="text-white flex justify-between w-full min-[769px]:px-20 sm:px-10">
                 <div class="flex flex-col gap-3">
                     <h1 class="font-semibold">Get to Know Us</h1>
                     <a class="text-sm" href="">About Us</a>
@@ -884,5 +936,6 @@
     </div>
 
     <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="src/js/script.js"></script>
 </body>
 </html>
